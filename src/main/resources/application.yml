@@ -1,0 +1,25 @@
+
+# 开发环境配置
+server:
+  # 服务器的HTTP端口，默认为80
+  port: 8080
+  servlet:
+    # 应用的访问路径
+    context-path: /southkite-rides
+
+
+
+# Spring配置
+spring:
+  profiles:
+    active: dev
+
+
+# MyBatis
+mybatis:
+  # 搜索指定包别名
+  typeAliasesPackage: com.southkite.springbootredis.mapper
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:mybatis/**/*Mapper.xml
+  # 加载全局的配置文件
+  configLocation: classpath:mybatis/mybatis-config.xml
